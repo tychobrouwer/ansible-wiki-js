@@ -6,3 +6,4 @@ wiki_js_port: 3000
 
 wiki_js_db_user: wikijs
 wiki_js_db_name: wikijs
+wiki_js_db_port: 5432
