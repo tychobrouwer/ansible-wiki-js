@@ -21,7 +21,7 @@
 - name: Get the latest version of wiki.js
   ansible.builtin.unarchive:
     src: https://github.com/Requarks/wiki/releases/latest/download/wiki-js.tar.gz
-    dest: /opt
+    dest: /opt/wiki-js
     owner: "{{ wiki_js_user }}"
     group: "{{ wiki_js_group }}"
     remote_src: true
