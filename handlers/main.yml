@@ -4,4 +4,4 @@ name: Restart Wiki.js
 ansible.builtin.service:
   name: wikijs
   state: restarted
-  enabled: yes
+  enabled: true

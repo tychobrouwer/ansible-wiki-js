@@ -37,4 +37,4 @@
   ansible.builtin.service:
     name: wiki
     state: started
-    enabled: yes
+    enabled: true
