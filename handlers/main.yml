@@ -2,6 +2,6 @@
 # handlers file for wiki js
 - name: Restart Wiki.js
   ansible.builtin.service:
-    name: wikijs
+    name: wiki
     state: restarted
     enabled: true
