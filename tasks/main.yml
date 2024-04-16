@@ -18,6 +18,14 @@
     shell: /sbin/nologin
     state: present
 
+- name: Create Wiki.js directory
+  ansible.builtin.file:
+    path: /opt/wiki-js
+    state: directory
+    owner: "{{ wiki_js_user }}"
+    group: "{{ wiki_js_group }}"
+    mode: "0755"
+
 - name: Get the latest version of wiki.js
   ansible.builtin.unarchive:
     src: https://github.com/Requarks/wiki/releases/latest/download/wiki-js.tar.gz
