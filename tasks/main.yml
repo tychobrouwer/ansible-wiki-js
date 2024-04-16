@@ -1,0 +1,10 @@
+---
+# tasks file for wiki js
+- name: Get the latest version of wiki.js
+  ansible.builtin.unarchive:
+    src: https://github.com/Requarks/wiki/releases/latest/download/wiki-js.tar.gz
+    dest: /opt
+    owner: "{{ wiki_js_user }}"
+    group: "{{ wiki_js_group }}"
+    remote_src: true
+  notify: Restart Wiki.js
