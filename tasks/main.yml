@@ -30,7 +30,7 @@
 - name: Create configuration file
   ansible.builtin.template:
     src: config.yml.j2
-    dest: /opt/wiki/config.yml
+    dest: /opt/wiki-js/config.yml
     mode: "0664"
     owner: "{{ wiki_js_user }}"
     group: "{{ wiki_js_group }}"
