@@ -2,3 +2,7 @@
 # vars file for wiki js
 wiki_js_user: wikijs
 wiki_js_group: wikijs
+
+wiki_js_db_port: 3306
+wiki_js_db_user: wikijs
+wiki_js_db_name: wikijs

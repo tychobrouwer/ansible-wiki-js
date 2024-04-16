@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: wiki-js
+  role_name: wiki_js
   namespace: tychobrouwer
   author: Tycho Brouwer
   description: Install and configure wiki.js
