@@ -6,6 +6,18 @@
       - nodejs
     state: present
 
+- name: Create Wiki.js user
+  ansible.builtin.group:
+    name: "{{ wiki_js_group }}"
+    state: present
+
+- name: Create Wiki.js user
+  ansible.builtin.user:
+    name: "{{ wiki_js_user }}"
+    group: "{{ wiki_js_group }}"
+    shell: /sbin/nologin
+    state: present
+
 - name: Get the latest version of wiki.js
   ansible.builtin.unarchive:
     src: https://github.com/Requarks/wiki/releases/latest/download/wiki-js.tar.gz
