@@ -6,8 +6,6 @@ The role installs and configures wiki.js.
 Role Variables
 --------------
 
-
-
 Example Playbook
 ----------------
 
