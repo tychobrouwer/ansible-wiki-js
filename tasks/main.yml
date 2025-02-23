@@ -1,9 +1,8 @@
 ---
 # tasks file for wiki js
-- name: Install packages
+- name: Install Node.js package
   ansible.builtin.package:
-    name:
-      - nodejs
+    name: nodejs
     state: present
 
 - name: Create Wiki.js user
@@ -16,6 +15,7 @@
     name: "{{ wiki_js_user }}"
     group: "{{ wiki_js_group }}"
     shell: /sbin/nologin
+    create_home: false
     state: present
 
 - name: Create Wiki.js directory
@@ -54,7 +54,7 @@
   notify: Restart Wiki.js
 
 - name: Ensure Wiki.js service is started and enabled
-  ansible.builtin.service:
+  ansible.builtin.systemd:
     name: wiki
     state: started
     enabled: true
