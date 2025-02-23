@@ -10,13 +10,20 @@ Example Playbook
 ----------------
 
 ```yaml
-    - hosts: all
-      vars:
+- hosts: all
+  vars:
+    wiki_js_db_pass: password
 
-      roles:
-         - { role: tychobrouwer.wiki-js, wiki_js_db_pass: "password" }
-         - { role: tychobrouwer.wiki-js, wiki_js_db_pass: "password",
-             wiki_js_db_user: "wikijs", wiki_js_db_name: "wikijs", wiki_js_port: 3000, wiki_js_user: "wikijs", wiki_js_group: "wikijs", wiki_js_db_port: 5432 }
+  roles:
+    - role: tychobrouwer.wiki-js
+      
+    - role: tychobrouwer.wiki-js
+      wiki_js_db_user: wikijs
+      wiki_js_db_name: wikijs
+      wiki_js_port: 3000
+      wiki_js_user: wikijs
+      wiki_js_group: wikijs
+      wiki_js_db_port: 5432
 ```
 
 License
